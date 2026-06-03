@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React, { useState } from "react";
 
 import {
@@ -29,32 +28,29 @@ export default function GTAEsports() {
     <div className="min-h-screen bg-[#f4f4f2] text-[#080808]">
       <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f4f4f2]/90 backdrop-blur">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="LINK" className="flex items-center">
-            <Image
+          <a href="#home" className="flex items-center">
+            <img
               src="/gtaesports-logo.png"
               alt="GTA Esports Logo"
-              width={260}
-              height={120}
-              priority
               className="h-auto w-[180px] md:w-[240px]"
             />
           </a>
 
           <div className="hidden items-center gap-7 text-xs font-black uppercase tracking-[0.22em] text-black/70 md:flex">
-            <a href="LINK" className="hover:text-[#c90000]">Info</a>
-            <a href="LINK" className="hover:text-[#c90000]">Play</a>
-            <a href="LINK" className="hover:text-[#c90000]">League</a>
-            <a href="LINK" className="hover:text-[#c90000]">Watch</a>
-            <a href="LINK" className="hover:text-[#c90000]">Community</a>
+            <a href="#info" className="hover:text-[#c90000]">Info</a>
+            <a href="#play" className="hover:text-[#c90000]">Play</a>
+            <a href="#league" className="hover:text-[#c90000]">League</a>
+            <a href="#watch" className="hover:text-[#c90000]">Watch</a>
+            <a href="#community" className="hover:text-[#c90000]">Community</a>
           </div>
 
           <Button asChild className="rounded-none bg-black px-6 font-black uppercase tracking-wide text-white hover:bg-[#c90000]">
-            <a href="LINK">Sign Up</a>
+            <a href="#register">Sign Up</a>
           </Button>
         </nav>
       </header>
 
-      <section className="relative overflow-hidden px-6 py-24">
+      <section id="home" className="relative overflow-hidden px-6 py-24">
         <div className="absolute left-0 top-20 h-2 w-48 bg-[#c90000]" />
         <div className="absolute bottom-24 right-0 h-2 w-60 bg-[#c90000]" />
 
@@ -74,13 +70,13 @@ export default function GTAEsports() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button asChild className="rounded-none bg-[#c90000] px-8 py-6 text-base font-black uppercase tracking-wide text-white hover:bg-black">
-                <a href="LINK">
+                <a href="#register">
                   Register to Play <ChevronRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
 
               <Button asChild variant="outline" className="rounded-none border-2 border-black bg-transparent px-8 py-6 text-base font-black uppercase tracking-wide text-black hover:bg-black hover:text-white">
-                <a href="LINK">View League</a>
+                <a href="#league">View League</a>
               </Button>
             </div>
 
@@ -93,11 +89,9 @@ export default function GTAEsports() {
 
           <Card className="rounded-none border-2 border-black bg-white shadow-[14px_14px_0px_#080808]">
             <CardContent className="p-8">
-              <Image
+              <img
                 src="/gtaesports-logo.png"
                 alt="GTA Esports Logo"
-                width={500}
-                height={200}
                 className="mx-auto mb-10 h-auto w-full max-w-[400px]"
               />
 
@@ -111,7 +105,7 @@ export default function GTAEsports() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section id="info" className="mx-auto max-w-7xl px-6 py-20">
         <SectionLabel text="Info" />
 
         <div className="mt-4 grid gap-10 md:grid-cols-[0.9fr_1.3fr]">
@@ -137,7 +131,7 @@ export default function GTAEsports() {
         </div>
       </section>
 
-      <section className="bg-black px-6 py-20 text-white">
+      <section id="play" className="bg-black px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl">
           <SectionLabel text="Play" dark />
 
@@ -189,7 +183,7 @@ export default function GTAEsports() {
         </div>
       </section>
 
-      <section className="bg-[#ecece8] px-6 py-20">
+      <section id="league" className="bg-[#ecece8] px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <SectionLabel text="League Format" />
 
@@ -206,7 +200,7 @@ export default function GTAEsports() {
         </div>
       </section>
 
-      <section className="px-6 py-20">
+      <section id="register" className="px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
             <SectionLabel text="Sign Up" />
@@ -261,7 +255,7 @@ export default function GTAEsports() {
         </div>
       </section>
 
-      <section className="bg-black px-6 py-20 text-white">
+      <section id="watch" className="bg-black px-6 py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
           <div>
             <SectionLabel text="Watch" dark />
@@ -275,7 +269,7 @@ export default function GTAEsports() {
             </p>
 
             <Button asChild className="mt-8 rounded-none bg-[#c90000] px-8 py-6 font-black uppercase text-white hover:bg-white hover:text-black">
-              <a href="LINK">Watch on Twitch</a>
+              <a href="#watch">Watch on Twitch</a>
             </Button>
           </div>
 
@@ -293,7 +287,7 @@ export default function GTAEsports() {
         </div>
       </section>
 
-      <section className="bg-[#c90000] px-6 py-20 text-white">
+      <section id="community" className="bg-[#c90000] px-6 py-20 text-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.3em] text-white/70">
@@ -310,7 +304,7 @@ export default function GTAEsports() {
           </div>
 
           <Button asChild className="rounded-none bg-white px-8 py-6 font-black uppercase text-black hover:bg-black hover:text-white">
-            <a href="LINK">Join Discord</a>
+            <a href="#community">Join Discord</a>
           </Button>
         </div>
       </section>
@@ -318,12 +312,10 @@ export default function GTAEsports() {
       <footer className="px-6 py-12">
         <div className="mx-auto grid max-w-7xl gap-8 border-t-2 border-black pt-8 md:grid-cols-4">
           <div className="md:col-span-2">
-            <a href="LINK">
-              <Image
+            <a href="#home">
+              <img
                 src="/gtaesports-logo.png"
                 alt="GTA Esports Logo"
-                width={240}
-                height={100}
                 className="h-auto w-[190px]"
               />
             </a>
@@ -336,9 +328,9 @@ export default function GTAEsports() {
           <div>
             <h4 className="font-black uppercase tracking-wide">Links</h4>
             <div className="mt-3 grid gap-2 text-sm font-bold text-black/60">
-              <a href="LINK">Play</a>
-              <a href="LINK">League</a>
-              <a href="LINK">Community</a>
+              <a href="#play">Play</a>
+              <a href="#league">League</a>
+              <a href="#community">Community</a>
             </div>
           </div>
 
