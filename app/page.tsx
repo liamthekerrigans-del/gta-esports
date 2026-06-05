@@ -338,7 +338,7 @@ export default function GTAEsports() {
             <h4 className="font-black uppercase tracking-wide">Contact</h4>
             <div className="mt-3 flex items-center gap-2 text-sm font-bold text-black/60">
               <Mail className="h-4 w-4 text-[#c90000]" />
-              <span>contact@gtaesports.com</span>
+              <span>liam@gtaesports.com</span>
             </div>
           </div>
         </div>
