@@ -1,21 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-
 import {
-  CalendarDays,
-  ChevronRight,
-  Crown,
-  Gamepad2,
-  Mail,
-  MapPin,
-  MessageCircle,
-  MonitorPlay,
-  Radio,
-  Swords,
-  TableProperties,
-  Trophy,
-  Users,
+  CalendarDays, ChevronRight, Crown, Gamepad2, Mail, MapPin,
+  MessageCircle, MonitorPlay, Radio, Swords, TableProperties, Trophy, Users,
 } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,6 +11,7 @@ import { Button } from "@/components/ui/button";
 
 const discordLink = "https://discord.gg/ttkYjGBZ";
 const contactEmail = "liam@gtaesports.com";
+const formEndpoint = "https://formspree.io/f/mbdedlyg";
 
 export default function GTAEsports() {
   const [signupType, setSignupType] = useState("individual");
@@ -32,11 +21,7 @@ export default function GTAEsports() {
       <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f4f4f2]/90 backdrop-blur">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="#home" className="flex items-center">
-            <img
-              src="/gtaesports-logo.png"
-              alt="GTA Esports Logo"
-              className="h-auto w-[180px] md:w-[240px]"
-            />
+            <img src="/gtaesports-logo.png" alt="GTA Esports Logo" className="h-auto w-[180px] md:w-[240px]" />
           </a>
 
           <div className="hidden items-center gap-7 text-xs font-black uppercase tracking-[0.22em] text-black/70 md:flex">
@@ -73,9 +58,7 @@ export default function GTAEsports() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button asChild className="rounded-none bg-[#c90000] px-8 py-6 text-base font-black uppercase tracking-wide text-white hover:bg-black">
-                <a href="#register">
-                  Register to Play <ChevronRight className="ml-2 h-5 w-5" />
-                </a>
+                <a href="#register">Register to Play <ChevronRight className="ml-2 h-5 w-5" /></a>
               </Button>
 
               <Button asChild variant="outline" className="rounded-none border-2 border-black bg-transparent px-8 py-6 text-base font-black uppercase tracking-wide text-black hover:bg-black hover:text-white">
@@ -92,11 +75,7 @@ export default function GTAEsports() {
 
           <Card className="rounded-none border-2 border-black bg-white shadow-[14px_14px_0px_#080808]">
             <CardContent className="p-8">
-              <img
-                src="/gtaesports-logo.png"
-                alt="GTA Esports Logo"
-                className="mx-auto mb-10 h-auto w-full max-w-[400px]"
-              />
+              <img src="/gtaesports-logo.png" alt="GTA Esports Logo" className="mx-auto mb-10 h-auto w-full max-w-[400px]" />
 
               <div className="grid gap-4">
                 <InfoRow icon={<Trophy />} title="Season One" text="League of Legends registration is officially open." />
@@ -110,19 +89,14 @@ export default function GTAEsports() {
 
       <section id="info" className="mx-auto max-w-7xl px-6 py-20">
         <SectionLabel text="Info" />
-
         <div className="mt-4 grid gap-10 md:grid-cols-[0.9fr_1.3fr]">
           <h2 className="text-4xl font-black uppercase leading-tight tracking-[-0.04em] md:text-5xl">
             Built for the GTA esports scene.
           </h2>
 
           <div className="space-y-5 text-lg font-semibold leading-8 text-black/65">
-            <p>
-              GTA Esports gives local players a place to compete, find teammates, join tournaments, and be part of a real esports community.
-            </p>
-            <p>
-              The platform is designed to support multiple games over time, starting with League of Legends.
-            </p>
+            <p>GTA Esports gives local players a place to compete, find teammates, join tournaments, and be part of a real esports community.</p>
+            <p>The platform is designed to support multiple games over time, starting with League of Legends.</p>
           </div>
         </div>
 
@@ -137,12 +111,8 @@ export default function GTAEsports() {
       <section id="play" className="bg-black px-6 py-20 text-white">
         <div className="mx-auto max-w-7xl">
           <SectionLabel text="Play" dark />
-
           <div className="mt-4 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <h2 className="text-4xl font-black uppercase tracking-[-0.04em] md:text-5xl">
-              Current game.
-            </h2>
-
+            <h2 className="text-4xl font-black uppercase tracking-[-0.04em] md:text-5xl">Current game.</h2>
             <p className="max-w-xl font-semibold leading-7 text-white/65">
               More games can be added later. Season One starts with League of Legends.
             </p>
@@ -152,15 +122,10 @@ export default function GTAEsports() {
             <Card className="rounded-none border-2 border-white bg-[#f4f4f2] text-black md:col-span-2">
               <CardContent className="p-8">
                 <Gamepad2 className="mb-5 h-10 w-10 text-[#c90000]" />
-
-                <h3 className="text-4xl font-black uppercase tracking-[-0.04em]">
-                  League of Legends
-                </h3>
-
+                <h3 className="text-4xl font-black uppercase tracking-[-0.04em]">League of Legends</h3>
                 <p className="mt-4 max-w-2xl font-semibold leading-7 text-black/65">
                   Register as an individual player or submit your full roster for GTA Esports Season One.
                 </p>
-
                 <div className="mt-8 grid gap-4 md:grid-cols-3">
                   <Mini title="Format" text="5v5 Summoner’s Rift" />
                   <Mini title="Signup" text="Solo or full team" />
@@ -172,11 +137,7 @@ export default function GTAEsports() {
             <Card className="rounded-none border-2 border-white/20 bg-white/10 text-white">
               <CardContent className="p-8">
                 <MonitorPlay className="mb-5 h-10 w-10 text-[#c90000]" />
-
-                <h3 className="text-3xl font-black uppercase">
-                  More Games Soon
-                </h3>
-
+                <h3 className="text-3xl font-black uppercase">More Games Soon</h3>
                 <p className="mt-4 font-semibold leading-7 text-white/65">
                   Valorant, Rocket League, Fortnite, and other games can be added later.
                 </p>
@@ -189,7 +150,6 @@ export default function GTAEsports() {
       <section id="league" className="bg-[#ecece8] px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <SectionLabel text="League Format" />
-
           <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.04em] md:text-5xl">
             Built like a real competitive season.
           </h2>
@@ -207,21 +167,17 @@ export default function GTAEsports() {
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
             <SectionLabel text="Sign Up" />
-
             <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.04em] md:text-5xl">
               Register for GTA Esports.
             </h2>
-
-            <p className="mt-3 font-semibold text-black/60">
-              Current game: League of Legends.
-            </p>
+            <p className="mt-3 font-semibold text-black/60">Current game: League of Legends.</p>
           </div>
 
           <div className="mx-auto mt-8 max-w-md">
             <label className="mb-2 block text-xs font-black uppercase tracking-[0.22em] text-black/70">
               Select Game
             </label>
-            <select className="w-full rounded-none border-2 border-black bg-white px-4 py-3 font-black uppercase outline-none">
+            <select className="w-full rounded-none border-2 border-black bg-white px-4 py-3 font-black uppercase outline-none" name="game">
               <option>League of Legends</option>
             </select>
           </div>
@@ -229,22 +185,14 @@ export default function GTAEsports() {
           <div className="mt-8 flex justify-center gap-3">
             <Button
               onClick={() => setSignupType("individual")}
-              className={`rounded-none px-6 font-black uppercase ${
-                signupType === "individual"
-                  ? "bg-[#c90000] text-white hover:bg-black"
-                  : "bg-white text-black hover:bg-black hover:text-white"
-              }`}
+              className={`rounded-none px-6 font-black uppercase ${signupType === "individual" ? "bg-[#c90000] text-white hover:bg-black" : "bg-white text-black hover:bg-black hover:text-white"}`}
             >
               Individual
             </Button>
 
             <Button
               onClick={() => setSignupType("team")}
-              className={`rounded-none px-6 font-black uppercase ${
-                signupType === "team"
-                  ? "bg-[#c90000] text-white hover:bg-black"
-                  : "bg-white text-black hover:bg-black hover:text-white"
-              }`}
+              className={`rounded-none px-6 font-black uppercase ${signupType === "team" ? "bg-[#c90000] text-white hover:bg-black" : "bg-white text-black hover:bg-black hover:text-white"}`}
             >
               Team
             </Button>
@@ -262,15 +210,12 @@ export default function GTAEsports() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
           <div>
             <SectionLabel text="Watch" dark />
-
             <h2 className="mt-4 text-4xl font-black uppercase tracking-[-0.04em] md:text-5xl">
               Featured matches live on Twitch.
             </h2>
-
             <p className="mt-4 font-semibold leading-8 text-white/65">
               Watch highlighted GTA Esports matches, playoffs, community showmatches, and season finals.
             </p>
-
             <Button asChild className="mt-8 rounded-none bg-[#c90000] px-8 py-6 font-black uppercase text-white hover:bg-white hover:text-black">
               <a href="#watch">Watch on Twitch</a>
             </Button>
@@ -278,11 +223,7 @@ export default function GTAEsports() {
 
           <div className="border-2 border-white/20 bg-white/10 p-8">
             <Radio className="mb-4 h-12 w-12 text-[#c90000]" />
-
-            <h3 className="text-2xl font-black uppercase">
-              GTA Esports Broadcast
-            </h3>
-
+            <h3 className="text-2xl font-black uppercase">GTA Esports Broadcast</h3>
             <p className="mt-3 font-semibold text-white/60">
               Live matches, VODs, highlights, and community streams will appear here.
             </p>
@@ -293,14 +234,10 @@ export default function GTAEsports() {
       <section id="community" className="bg-[#c90000] px-6 py-20 text-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.3em] text-white/70">
-              Discord
-            </p>
-
+            <p className="text-xs font-black uppercase tracking-[0.3em] text-white/70">Discord</p>
             <h2 className="mt-3 text-4xl font-black uppercase tracking-[-0.04em] md:text-5xl">
               Join the GTA Esports community.
             </h2>
-
             <p className="mt-4 max-w-2xl font-semibold leading-8 text-white/80">
               Find teammates, receive match updates, ask questions, and stay connected with the GTA esports community.
             </p>
@@ -321,13 +258,8 @@ export default function GTAEsports() {
         <div className="mx-auto grid max-w-7xl gap-8 border-t-2 border-black pt-8 md:grid-cols-4">
           <div className="md:col-span-2">
             <a href="#home">
-              <img
-                src="/gtaesports-logo.png"
-                alt="GTA Esports Logo"
-                className="h-auto w-[190px]"
-              />
+              <img src="/gtaesports-logo.png" alt="GTA Esports Logo" className="h-auto w-[190px]" />
             </a>
-
             <p className="mt-4 max-w-md font-semibold text-black/60">
               A local esports platform for amateur players and teams across the Greater Toronto Area.
             </p>
@@ -356,20 +288,14 @@ export default function GTAEsports() {
 }
 
 function SectionLabel({ text, dark = false }: { text: string; dark?: boolean }) {
-  return (
-    <p className={`text-xs font-black uppercase tracking-[0.3em] ${dark ? "text-[#c90000]" : "text-[#c90000]"}`}>
-      {text}
-    </p>
-  );
+  return <p className={`text-xs font-black uppercase tracking-[0.3em] ${dark ? "text-[#c90000]" : "text-[#c90000]"}`}>{text}</p>;
 }
 
 function Stat({ title, subtitle }: { title: string; subtitle: string }) {
   return (
     <div className="border-2 border-black bg-white p-4 text-center">
       <p className="text-2xl font-black uppercase">{title}</p>
-      <p className="mt-1 text-xs font-black uppercase tracking-[0.2em] text-black/50">
-        {subtitle}
-      </p>
+      <p className="mt-1 text-xs font-black uppercase tracking-[0.2em] text-black/50">{subtitle}</p>
     </div>
   );
 }
@@ -390,13 +316,9 @@ function Feature({ icon, title, text }: { icon: React.ReactNode; title: string; 
   return (
     <Card className="rounded-none border-2 border-black bg-white transition hover:-translate-y-1 hover:shadow-[8px_8px_0px_#c90000]">
       <CardContent className="p-6">
-        <div className="mb-4 text-[#c90000] [&_svg]:h-8 [&_svg]:w-8">
-          {icon}
-        </div>
+        <div className="mb-4 text-[#c90000] [&_svg]:h-8 [&_svg]:w-8">{icon}</div>
         <h3 className="text-xl font-black uppercase">{title}</h3>
-        <p className="mt-3 text-sm font-semibold leading-6 text-black/60">
-          {text}
-        </p>
+        <p className="mt-3 text-sm font-semibold leading-6 text-black/60">{text}</p>
       </CardContent>
     </Card>
   );
@@ -411,15 +333,14 @@ function Mini({ title, text }: { title: string; text: string }) {
   );
 }
 
-function Field({ label, placeholder }: { label: string; placeholder: string }) {
+function Field({ label, placeholder, name }: { label: string; placeholder: string; name: string }) {
   return (
     <label className="block">
-      <span className="mb-2 block text-xs font-black uppercase tracking-[0.18em] text-black/70">
-        {label}
-      </span>
-
+      <span className="mb-2 block text-xs font-black uppercase tracking-[0.18em] text-black/70">{label}</span>
       <input
+        name={name}
         placeholder={placeholder}
+        required
         className="w-full rounded-none border-2 border-black bg-[#f4f4f2] px-4 py-3 font-semibold outline-none placeholder:text-black/35 focus:border-[#c90000]"
       />
     </label>
@@ -428,17 +349,20 @@ function Field({ label, placeholder }: { label: string; placeholder: string }) {
 
 function IndividualForm() {
   return (
-    <form className="grid gap-5">
+    <form action={formEndpoint} method="POST" className="grid gap-5">
+      <input type="hidden" name="Signup Type" value="Individual Player" />
+      <input type="hidden" name="Game" value="League of Legends" />
+
       <div className="grid gap-5 md:grid-cols-2">
-        <Field label="Full Name" placeholder="Your name" />
-        <Field label="Email" placeholder="you@email.com" />
-        <Field label="Discord Username" placeholder="Discord username" />
-        <Field label="League IGN" placeholder="Summoner name" />
-        <Field label="Current Rank" placeholder="Emerald, Diamond, etc." />
-        <Field label="City / Area" placeholder="Toronto, Mississauga, etc." />
+        <Field label="Full Name" name="Full Name" placeholder="Your name" />
+        <Field label="Email" name="Email" placeholder="you@email.com" />
+        <Field label="Discord Username" name="Discord Username" placeholder="Discord username" />
+        <Field label="League IGN" name="League IGN" placeholder="Summoner name" />
+        <Field label="Current Rank" name="Current Rank" placeholder="Emerald, Diamond, etc." />
+        <Field label="City / Area" name="City / Area" placeholder="Toronto, Mississauga, etc." />
       </div>
 
-      <Button type="button" className="mt-4 rounded-none bg-[#c90000] px-8 py-6 font-black uppercase text-white hover:bg-black">
+      <Button type="submit" className="mt-4 rounded-none bg-[#c90000] px-8 py-6 font-black uppercase text-white hover:bg-black">
         Submit Individual Registration
       </Button>
     </form>
@@ -447,29 +371,33 @@ function IndividualForm() {
 
 function TeamForm() {
   return (
-    <form className="grid gap-5">
+    <form action={formEndpoint} method="POST" className="grid gap-5">
+      <input type="hidden" name="Signup Type" value="Team Registration" />
+      <input type="hidden" name="Game" value="League of Legends" />
+
       <div className="grid gap-5 md:grid-cols-2">
-        <Field label="Team Name" placeholder="Your team name" />
-        <Field label="Captain Name" placeholder="Captain full name" />
-        <Field label="Captain Email" placeholder="captain@email.com" />
-        <Field label="Captain Discord" placeholder="Discord username" />
-        <Field label="Average Team Rank" placeholder="Emerald, Diamond, etc." />
-        <Field label="City / Area" placeholder="Toronto, Vaughan, etc." />
+        <Field label="Team Name" name="Team Name" placeholder="Your team name" />
+        <Field label="Captain Name" name="Captain Name" placeholder="Captain full name" />
+        <Field label="Captain Email" name="Captain Email" placeholder="captain@email.com" />
+        <Field label="Captain Discord" name="Captain Discord" placeholder="Discord username" />
+        <Field label="Average Team Rank" name="Average Team Rank" placeholder="Emerald, Diamond, etc." />
+        <Field label="City / Area" name="City / Area" placeholder="Toronto, Vaughan, etc." />
       </div>
 
       <label className="block">
         <span className="mb-2 block text-xs font-black uppercase tracking-[0.18em] text-black/70">
           Team Roster
         </span>
-
         <textarea
+          name="Team Roster"
           rows={5}
+          required
           placeholder={"Player 1 - Summoner name - Role - Rank\nPlayer 2 - Summoner name - Role - Rank\nPlayer 3 - Summoner name - Role - Rank"}
           className="w-full rounded-none border-2 border-black bg-[#f4f4f2] px-4 py-3 font-semibold outline-none placeholder:text-black/35 focus:border-[#c90000]"
         />
       </label>
 
-      <Button type="button" className="mt-4 rounded-none bg-[#c90000] px-8 py-6 font-black uppercase text-white hover:bg-black">
+      <Button type="submit" className="mt-4 rounded-none bg-[#c90000] px-8 py-6 font-black uppercase text-white hover:bg-black">
         Submit Team Registration
       </Button>
     </form>
