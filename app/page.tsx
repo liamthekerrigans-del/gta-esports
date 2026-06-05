@@ -21,6 +21,9 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+const discordLink = "https://discord.gg/ttkYjGBZ";
+const contactEmail = "liam@gtaesports.com";
+
 export default function GTAEsports() {
   const [signupType, setSignupType] = useState("individual");
 
@@ -303,9 +306,14 @@ export default function GTAEsports() {
             </p>
           </div>
 
-          <Button asChild className="rounded-none bg-white px-8 py-6 font-black uppercase text-black hover:bg-black hover:text-white">
-            <a href="#community">Join Discord</a>
-          </Button>
+          <a
+            href={discordLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-none bg-white px-8 py-6 text-base font-black uppercase text-black transition hover:bg-black hover:text-white"
+          >
+            Join Discord
+          </a>
         </div>
       </section>
 
@@ -338,7 +346,7 @@ export default function GTAEsports() {
             <h4 className="font-black uppercase tracking-wide">Contact</h4>
             <div className="mt-3 flex items-center gap-2 text-sm font-bold text-black/60">
               <Mail className="h-4 w-4 text-[#c90000]" />
-              <span>liam@gtaesports.com</span>
+              <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
             </div>
           </div>
         </div>
